@@ -18,13 +18,13 @@ const FormPage = () => {
         //     setId(data.id);
         //     console.log(data);}); 
         AuthService.handleLogin({details, setId}); 
-        const box = document.getElementsByClassName('FormPage_box__f2jVR');
-        box[0].style.display = 'none'; 
+        const box = document.getElementById('box');
+        box.style.display = 'none'; 
     }
 
     return (
         <>
-        <div className={style.box}>
+        <div className={style.box} id='box'>
             
             <h1>Welcome,enter your details</h1>
             <form onSubmit={handleSubmit(postDetails)}>

@@ -21,13 +21,13 @@ const PageComments = (props) => {
         //     .then((response) => response.json())
         //     .then((data) => console.log(data));
         PostService.handleComments(post);
-        const box = document.getElementsByClassName('PageComments_box__a3qsa');
-        box[0].style.display = 'none';
+        const box = document.getElementById('boxs');
+        box.style.display = 'none';
 
     }
 
     return (
-        <div className={style.box}>
+        <div className={style.box} id='boxs'>
 
             <h1>Write your comments</h1>
             <form onSubmit={postComments}>
